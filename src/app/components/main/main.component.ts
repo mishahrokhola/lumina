@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
+
+import { ThemeService } from '../../services';
+
+import { Theme } from '../../enums/theme.enum';
 
 @Component({
 	selector: 'main',
@@ -6,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-	constructor() {}
+	@HostBinding('class') private currentTheme = this.theme.getThemeClass();
 
-	public ngOnInit(): void {}
+	constructor(private theme: ThemeService) {}
+
+	public ngOnInit(): void {
+		this.theme.theme$.subscribe((theme: Theme) => (this.currentTheme = this.theme.getThemeClass(theme)));
+	}
 }
