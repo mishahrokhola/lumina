@@ -27,11 +27,11 @@ export class ThemeService {
 		});
 	}
 
-	public getCurrentTheme(): Theme {
+	public getTheme(): Theme {
 		return this.currentTheme;
 	}
 
-	public setCurrentTheme(theme: Theme): void {
+	public setTheme(theme: Theme): void {
 		this.currentTheme = theme;
 		this.isThemeSetByUser = true;
 		this.theme$.next(theme);

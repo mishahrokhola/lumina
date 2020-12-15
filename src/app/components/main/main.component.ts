@@ -17,4 +17,14 @@ export class MainComponent implements OnInit {
 	public ngOnInit(): void {
 		this.theme.theme$.subscribe((theme: Theme) => (this.currentTheme = this.theme.getThemeClass(theme)));
 	}
+
+	public handleThemeChange(): void {
+		const theme = this.theme.getTheme();
+
+		if (theme === Theme.sun) {
+			return this.theme.setTheme(Theme.cosmos);
+		}
+
+		return this.theme.setTheme(Theme.sun);
+	}
 }
