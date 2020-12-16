@@ -1,0 +1,87 @@
+@import 'variables/index';
+
+$purple-width: 10px;
+
+$purple-alfa-sun: 0.15;
+$purple-alfa-cosmos: 0.3;
+
+$purple-alfa: 0.3;
+$purple-alfa-step: 0.1;
+
+.main-icon {
+	position: relative;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+}
+
+.circle {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: background-color 300ms;
+
+	&.sun {
+		background-color: $icon-sun;
+	}
+
+	&.cosmos {
+		background-color: $icon-cosmos;
+	}
+}
+
+.pulse,
+.pulse:before,
+.pulse:after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	border: $purple-width solid;
+	transition: border-color 300ms;
+	transform: translate(-50%, -50%);
+}
+
+.pulse {
+	width: calc(100% + #{$purple-width});
+	height: calc(100% + #{$purple-width});
+
+	&:before,
+	&:after {
+		content: '';
+	}
+
+	&:before {
+		width: calc(100% + #{$purple-width} * 2);
+		height: calc(100% + #{$purple-width} * 2);
+	}
+
+	&:after {
+		width: calc(100% + #{$purple-width} * 3);
+		height: calc(100% + #{$purple-width} * 3);
+	}
+
+	&.sun {
+		border-color: rgba($icon-pulse-sun, $purple-alfa-sun);
+
+		&:before {
+			border-color: rgba($icon-pulse-sun, $purple-alfa-sun + $purple-alfa-step * 1);
+		}
+
+		&:after {
+			border-color: rgba($icon-pulse-sun, $purple-alfa-sun + $purple-alfa-step * 2);
+		}
+	}
+
+	&.cosmos {
+		border-color: rgba($icon-pulse-cosmos, $purple-alfa-cosmos);
+
+		&:before {
+			border-color: rgba($icon-pulse-cosmos, $purple-alfa-cosmos + $purple-alfa-step * 1);
+		}
+
+		&:after {
+			border-color: rgba($icon-pulse-cosmos, $purple-alfa-cosmos + $purple-alfa-step * 2);
+		}
+	}
+}

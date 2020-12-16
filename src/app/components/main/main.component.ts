@@ -10,21 +10,12 @@ import { Theme } from '../../enums/theme.enum';
 	styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
+	@HostBinding('class.theme') private mainThemeClass = true;
 	@HostBinding('class') private currentTheme = this.theme.getThemeClass();
 
 	constructor(private theme: ThemeService) {}
 
 	public ngOnInit(): void {
 		this.theme.theme$.subscribe((theme: Theme) => (this.currentTheme = this.theme.getThemeClass(theme)));
-	}
-
-	public handleThemeChange(): void {
-		const theme = this.theme.getTheme();
-
-		if (theme === Theme.sun) {
-			return this.theme.setTheme(Theme.cosmos);
-		}
-
-		return this.theme.setTheme(Theme.sun);
 	}
 }
