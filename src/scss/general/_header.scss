@@ -1,4 +1,4 @@
-@import 'variables/sizes';
+@import 'variables/index';
 
 header {
 	display: flex;
@@ -9,4 +9,5 @@ header {
 	left: 0;
 	width: 100%;
 	height: $header-height;
+	z-index: $z-index-header;
 }

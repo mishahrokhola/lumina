@@ -10,5 +10,11 @@ main {
 }
 
 main {
+	position: relative;
 	padding-top: $header-height;
+
+	.content {
+		position: relative;
+		z-index: 1;
+	}
 }
