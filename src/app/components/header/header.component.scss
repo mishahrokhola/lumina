@@ -1,6 +1,7 @@
 @import 'variables/index';
 
-$purple-width: 10px;
+$icon-size: 50px;
+$purple-width: $icon-size / 2.5;
 
 $purple-alfa-sun: 0.15;
 $purple-alfa-cosmos: 0.3;
@@ -11,8 +12,8 @@ $purple-alfa-step: 0.1;
 .main-icon {
 	position: relative;
 	cursor: pointer;
-	width: 40px;
-	height: 40px;
+	width: $icon-size;
+	height: $icon-size;
 	transition: transform 300ms;
 
 	&:active {
@@ -21,8 +22,8 @@ $purple-alfa-step: 0.1;
 }
 
 .circle {
-	width: 40px;
-	height: 40px;
+	width: $icon-size;
+	height: $icon-size;
 	border-radius: 50%;
 	transition: background-color 300ms;
 
