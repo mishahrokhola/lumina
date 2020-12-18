@@ -14,28 +14,4 @@
 img {
 	position: absolute;
 	transition: opacity $animation-theme-time;
-
-	@for $i from 1 through 10 {
-		animation: move infinite;
-
-		&.animation-#{$i} {
-			@if $i < 3 {
-				animation-duration: $i * 80s;
-			} @else if $i > 5 {
-				animation-duration: $i * 60s;
-			} @else {
-				animation-duration: $i * 40s;
-			}
-		}
-	}
-}
-
-@keyframes move {
-	from {
-		transform: translateX(0);
-	}
-
-	to {
-		transform: translateX(-100vw);
-	}
 }
