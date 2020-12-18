@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../services';
 
 import { Theme } from '../../enums/theme.enum';
-import { AppConfig } from '../../config/app.config';
 
 @Component({
 	selector: 'header',
