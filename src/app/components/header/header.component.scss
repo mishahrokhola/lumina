@@ -18,10 +18,6 @@ $purple-alfa-step: 0.1;
 	&:active {
 		transform: scale(0.8);
 	}
-
-	&.no-events {
-		pointer-events: none;
-	}
 }
 
 .circle {

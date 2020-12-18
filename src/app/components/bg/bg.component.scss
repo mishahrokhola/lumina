@@ -13,16 +13,15 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	transition: opacity $animation-theme-time;
 	overflow: hidden;
 
 	&.show {
-		animation: show-bg $animation-theme forwards;
-		transform: translateY(0);
+		opacity: 1;
 	}
 
 	&.hide {
-		animation: hide-bg $animation-theme forwards;
-		transform: translateY(-100%);
+		opacity: 0;
 	}
 }
 
@@ -44,24 +43,4 @@
 
 .bg-cosmos {
 	background: linear-gradient(to top, #283e51, #0a2342);
-}
-
-@keyframes hide-bg {
-	0% {
-		transform: translateY(0);
-	}
-
-	100% {
-		transform: translateY(100%);
-	}
-}
-
-@keyframes show-bg {
-	0% {
-		transform: translateY(-100%);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
 }
