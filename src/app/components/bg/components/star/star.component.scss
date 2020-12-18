@@ -1,0 +1,9 @@
+img {
+	position: absolute;
+	opacity: 1;
+	transition: opacity 500ms;
+}
+
+.hide {
+	opacity: 0;
+}

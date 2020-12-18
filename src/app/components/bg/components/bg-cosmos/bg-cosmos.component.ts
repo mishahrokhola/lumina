@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { RangePipe } from '../../../../pipes';
 
 @Component({
 	selector: 'bg-cosmos',
 	templateUrl: './bg-cosmos.component.html',
 	styleUrls: ['./bg-cosmos.component.scss'],
 })
-export class BgCosmosComponent implements OnInit {
-	constructor() {}
+export class BgCosmosComponent {
+	public readonly startArray = this.range.transform(700);
 
-	public ngOnInit(): void {}
+	constructor(private range: RangePipe) {}
 }

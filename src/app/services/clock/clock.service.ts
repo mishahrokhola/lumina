@@ -5,11 +5,8 @@ import { Observable, timer } from 'rxjs';
 	providedIn: 'root',
 })
 export class ClockService {
-	private readonly timer$ = timer(0, 1_000);
-
+	public readonly timer$ = timer(0, 1_000);
 	public readonly hour$ = this.getHourObservable();
-
-	constructor() {}
 
 	private getHourObservable(): Observable<number> {
 		return new Observable<number>((subscriber) => {
