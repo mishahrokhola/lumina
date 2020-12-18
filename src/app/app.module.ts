@@ -17,6 +17,7 @@ import { BgComponent } from './components/bg/bg.component';
 import { BgSunComponent } from './components/bg/components/bg-sun/bg-sun.component';
 import { BgCosmosComponent } from './components/bg/components/bg-cosmos/bg-cosmos.component';
 import { StarComponent } from './components/bg/components/star/star.component';
+import { CloudsComponent } from './components/bg/components/clouds/clouds.component';
 
 @NgModule({
 	declarations: [
@@ -31,6 +32,7 @@ import { StarComponent } from './components/bg/components/star/star.component';
 		BgCosmosComponent,
 		BgSunComponent,
 		StarComponent,
+		CloudsComponent,
 	],
 	imports: [BrowserModule, CommonModule, UIRouterModule.forRoot(AppRouting)],
 	providers: [RangePipe],

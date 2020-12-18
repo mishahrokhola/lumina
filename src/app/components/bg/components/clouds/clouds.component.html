@@ -1,0 +1,16 @@
+<div class="clouds">
+	<img
+		class="sky"
+		[ngStyle]="{ opacity: currentTheme === Theme.sun ? '1' : '0' }"
+		src="assets/images/cloud-sky.png"
+		alt="cloud-sky"
+	/>
+	<img
+		*ngFor="let cloud of clouds"
+		[class]="'animation-' + cloud.animation"
+		[style]="{ top: cloud.top + '%', left: cloud.left + '%', width: cloud.width + '%' }"
+		[ngStyle]="{ opacity: cloud.opacity / 100 + cloudOpacity }"
+		src="assets/images/cloud-{{ cloud.index }}.png"
+		alt="cloud-{{ cloud.index }}"
+	/>
+</div>
