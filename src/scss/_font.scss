@@ -1,0 +1,6 @@
+@import './mixins/index';
+
+@include font-face('Caveat', '../../assets/fonts/Caveat-Regular', 400); // Regular
+@include font-face('Caveat', '../../assets/fonts/Caveat-Medium', 500); // Medium
+@include font-face('Caveat', '../../assets/fonts/Caveat-SemiBold', 600); // SemiBold
+@include font-face('Caveat', '../../assets/fonts/Caveat-Bold', 700); // Bold
