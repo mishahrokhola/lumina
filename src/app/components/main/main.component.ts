@@ -10,7 +10,7 @@ import { Theme } from '../../enums/theme.enum';
 	styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-	@HostBinding('class.theme') private mainThemeClass = true;
+	@HostBinding('class.theme') private readonly mainThemeClass = true;
 	@HostBinding('class') private currentTheme = this.theme.getThemeClass();
 
 	constructor(private theme: ThemeService) {}
